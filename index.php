@@ -2,7 +2,7 @@
 
 /******************************
  * $File:index.php
- * $Description: å¸å‹ ç³»ç»Ÿæ ¸å¿ƒæ–‡ä»¶
+ * $Description: µÛÓÑ ÏµÍ³ºËÐÄÎÄ¼þ
  * $Author: ahui 
  * $Time:2010-06-06
  * $Update:Ahui
@@ -13,24 +13,24 @@ require_once ("core/deayou.config.php");
 
 error_reporting(E_ALL ^ E_NOTICE); 
 
-//å¸å‹ç³»ç»Ÿæ ¸å¿ƒé…ç½®
+//µÛÓÑÏµÍ³ºËÐÄÅäÖÃ
 require_once("core/deayou.inc.php");
 
-//æ˜¯å¦æŽ§åˆ¶ipå¯ä»¥è®¿é—®
+//ÊÇ·ñ¿ØÖÆip¿ÉÒÔ·ÃÎÊ
 if(file_exists(DEAYOU_PATH."ipconfig.php")){
 	require_once DEAYOU_PATH."ipconfig.php";
 	if(ip_control_all($allow_ip_all)){
-		echo 'æ‚¨çš„IPä¸èƒ½è®¿é—®,è¯·ä¸Žç®¡ç†å‘˜è”ç³».'; exit;
+		echo 'ÄúµÄIP²»ÄÜ·ÃÎÊ,ÇëÓë¹ÜÀíÔ±ÁªÏµ.'; exit;
 	}
 }
 
-//å¸å‹p2på€Ÿè´·é…ç½®æ–‡ä»¶
+//µÛÓÑp2p½è´ûÅäÖÃÎÄ¼þ
 if(file_exists("core/deayou.dyp2p.php")){
 	require_once("core/deayou.dyp2p.php");
 }
 
 $magic->assign("_G",$_G);
 
-//å¸å‹ç³»ç»Ÿæ ¸å¿ƒæ–‡ä»¶
+//µÛÓÑÏµÍ³ºËÐÄÎÄ¼þ
 require_once("core/deayou.core.php");
 ?>
